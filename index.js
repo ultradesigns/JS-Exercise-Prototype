@@ -97,7 +97,7 @@ function Baby() {
 
 
 ///////// END OF CHALLENGE /////////
-///////// END OF CHALLENGE /////////
+///////// END OF CHALLENGE //////////
 ///////// END OF CHALLENGE //////////
 if (typeof exports !== 'undefined') {
   module.exports = module.exports || {}
