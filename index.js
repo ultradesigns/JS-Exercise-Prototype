@@ -50,7 +50,7 @@ Person.prototype.eat = function(eatable){
   if(this.stomach.length < 10){
     this.stomach.push(eatable);
   }
-}
+}  
 
 Person.prototype.poop = function(deficate){
   if(this.stomach )
