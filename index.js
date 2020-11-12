@@ -53,8 +53,20 @@ Person.prototype.eat = function(eatable){
 }  
 
 Person.prototype.poop = function(deficate){
-  if(this.stomach )
+  this.stomach = [];
 }
+
+Person.prototype.toString = function(){
+  return `${this.name}, ${this.age}`;
+}
+
+const personOne = new Person({
+  name: "Lance",
+  age: "43",
+});
+
+console.log(personOne.eat("Yogart"));
+
 
 /*
   TASK 2
@@ -70,10 +82,24 @@ Person.prototype.poop = function(deficate){
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
+function Car(model, milesPerGallon){
+  this.model = model;
+  this.milesPerGallon = milesPerGallon;
+  this.tank = 0;
+  this.odometer = 0;
+  
+  }
+  Car.prototype.fill = function(gallons){ 
+    this.tank = this.tank+gallons;
+  }
 
-}
+  // this.fill(gallons){
+  //   this.tank = gallons.tank;
+  // this.drive(distance){
 
+  // }
+
+// console.log(car(nsx, 25));
 /*
   TASK 3
     - Write a Baby constructor subclassing Person.
@@ -81,18 +107,32 @@ function Car() {
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby() {
+// function Baby() {
+  Person.prototype.baby =function (name, age, toy){
+      Person.call(this, name, age,);
+      this.favoriteToy = toy.favoriteToy;
+  }
 
-}
+
+  Person.prototype.play = (toy) => {
+    return `Playing with ${toy}`;
+  }
 
 /* 
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  
+  1. Answer: Is the function called by new?
+
+  2. Answer: Is the function called by call(), apply(), or bind()?
+
+  3. Answer: Is the function called as a method, ie: obj.func()?
+
+  4. Answer: Is the function called in the global scope?
+
+If strict  ode is enabled, return undefined.
+Otherwise, return the global object, ie: window.
 */
 
 
