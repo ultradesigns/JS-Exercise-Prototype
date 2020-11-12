@@ -26,6 +26,7 @@ Airplane.prototype.land = function () {
 // 👇 COMPLETE YOUR WORK BELOW 👇
 */
 
+
 /*
   TASK 1
     - Write a Person Constructor that initializes `name` and `age` from arguments.
@@ -39,8 +40,20 @@ Airplane.prototype.land = function () {
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
-function Person() {
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.stomach = [];
+}
 
+Person.prototype.eat = function(eatable){
+  if(this.stomach.length < 10){
+    this.stomach.push(eatable);
+  }
+}
+
+Person.prototype.poop = function(deficate){
+  if(this.stomach )
 }
 
 /*
